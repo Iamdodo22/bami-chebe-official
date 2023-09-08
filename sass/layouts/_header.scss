@@ -26,13 +26,6 @@
 @media (max-width:480px) {
     &__btn{
         @include colflex;
-    }}
-
-@media (max-width:430px) {
-    .header{
-        padding: 0;
-        &__top{
-            // gap: .1rem;
-        }
     }
-}}
+  }
+}

@@ -9,7 +9,7 @@
 }
 @media (max-width:1000px) {
     .section-ourStory{
-        @include colflex;
+        @include colflex($gap:3rem);
     }
 }
 

@@ -167,6 +167,7 @@ body {
   border: 1px solid;
 }
 .input-con input {
+  -webkit-outline: none;
   outline: none;
   border: none;
   border-right: 1px solid;
@@ -225,9 +226,6 @@ html {
     width: 30%;
   }
 }
-.btn:hover {
-  transform: translateY(-3px);
-}
 
 @media (max-width: 480px) {
   .btn {
@@ -269,11 +267,6 @@ html {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-  }
-}
-@media (max-width: 430px) {
-  .header .header {
-    padding: 0;
   }
 }
 
@@ -506,7 +499,7 @@ body {
   .section-ourStory {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 3rem;
   }
 }
 .section-shop {
