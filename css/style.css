@@ -201,8 +201,12 @@ html {
   font-size: 12px;
   white-space: nowrap;
   width: 50%;
+  border: none;
   cursor: pointer;
   transition: all 0.2s;
+}
+.btn-white {
+  border-radius: 0;
 }
 .btn-black {
   background-color: black;

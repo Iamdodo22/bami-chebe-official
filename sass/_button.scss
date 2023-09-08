@@ -4,9 +4,12 @@
     font-size: 12px;
     white-space: nowrap;
     width: 50%;
+    border: none;
     cursor: pointer;
     transition: all .2s;
-
+    &-white{
+        border-radius: 0;
+    }
     &-black{
         background-color: $color-black;
         color: $color-white;
@@ -28,7 +31,7 @@
                 }
         }
     }
-    
+
 }
 @media (max-width:480px) {
     .btn{
