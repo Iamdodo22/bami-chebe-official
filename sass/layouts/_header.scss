@@ -1,0 +1,38 @@
+.header{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+    background-image:url(/img/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 68%;
+    background-blend-mode: screen;
+    grid-template-columns: auto;
+    grid-template-rows: 10% 70%;
+    grid-template-areas: 
+    "top"
+    "content"
+    "button";
+    &__top{
+        grid-area: top;
+    }
+
+&__btn{
+    justify-self: center;
+    align-self: flex-start;
+    @include rowflex($gap:2rem)
+}
+@media (max-width:480px) {
+    &__btn{
+        @include colflex;
+    }}
+
+@media (max-width:430px) {
+    .header{
+        padding: 0;
+        &__top{
+            // gap: .1rem;
+        }
+    }
+}}

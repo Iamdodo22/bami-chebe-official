@@ -1,0 +1,94 @@
+.navigation{
+    &-checkbox{
+        display: none;
+    }
+    &-checkbox:checked~&-background{
+        transform: scale(800);
+    }
+    &-checkbox:checked~&-nav{
+        visibility: visible;
+    }
+    &-button {
+        background-color: $color-white;
+        height: 4rem;
+        width: 4rem;
+        position: fixed;
+        top: 2rem;
+        right: 6rem;
+        border-radius: 50%;
+        z-index: 2000;
+        box-shadow: 0 1rem 3rem rgba($color-black, .1);
+        text-align: center;
+        cursor: pointer;
+    }
+    &-icon{
+        position: relative;
+        margin-top: 2rem;
+        &,
+        &::before,
+        &::after{
+            width: 2rem;
+            height: 2px;
+            background-color: $color-black;
+            display: inline-block;
+    
+        }
+        &::after,
+        &::before{
+            position: absolute;
+            content: "";
+            left: 0;
+            transition: all .2s;
+            
+        }
+        &::before{
+            top: -.8rem;
+        }
+        &::after{
+            top: .8rem;
+        }
+    }
+    &-checkbox:checked+&-button &-icon{
+        background-color: transparent;
+    }
+    &-checkbox:checked+&-button &-icon::before{
+        top: 0;
+        transform: rotate(135deg);
+    }
+    &-checkbox:checked+&-button &-icon::after{
+        top: 0;
+        transform: rotate(-135deg);
+    }
+    &-background{
+        width: 2rem;
+        height: 2rem;
+        position: fixed;
+        top: 2.5rem;
+        right: 6.5rem;
+        background-color: rgba($color-black,.5);
+        border-radius: 50%;
+        z-index: 1400;
+        transition: all .2s;
+    }
+    &-nav{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        @include colflex;
+        visibility: hidden;
+        z-index: 1500;
+        a{
+            font-family: $font-family-4;
+            font-weight: 700;
+            font-size: 18px;
+            text-decoration: none;
+            color: $color-white;
+            transition: all .5s;
+            &:hover,
+            &:focus{
+                transform: scale(1.3);
+         }  
+        }
+    }
+}

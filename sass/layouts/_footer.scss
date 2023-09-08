@@ -1,0 +1,34 @@
+.footer{
+    height: 100%;
+    font-size: 15px;
+    &-con{
+        height: 100%;
+        @include rowflex($gap:15rem);
+        justify-content: center;
+        align-items: center;
+        ul{
+            @include colflex;
+            justify-content: center;
+            align-items: center;
+            li{
+                list-style: none;
+                &:nth-child(2){
+                    font-weight: 700;
+                }
+                &:nth-child(3){
+                    color: $color-gray;
+                }
+                img{
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+    }
+}
+@media (max-width:680px) {
+    .footer{
+        &-con{
+        @include colflex($gap:3rem);
+    }}
+}

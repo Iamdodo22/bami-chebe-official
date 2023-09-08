@@ -1,0 +1,10 @@
+@mixin rowflex($gap:1rem){
+    display: flex;
+    flex-direction: row;
+    gap: $gap;
+}
+@mixin colflex($gap:1rem){
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}

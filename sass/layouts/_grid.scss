@@ -1,0 +1,47 @@
+body{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100vh 90vh 80vh 50vh 50vh;
+    grid-template-areas: 
+    "header"
+    "ourStory"
+    "shopNow"
+    "promotion"
+    "footer";
+}
+@media (max-width:1000px) {
+    body{
+        grid-template-rows: 100vh 140vh 120vh 70vh 70vh;
+    }
+}
+.header{
+    grid-area: header;
+}
+.section-ourStory{
+    grid-area: ourStory;
+}
+.section-shop{
+    grid-area: shopNow;
+}
+.section-promotion{
+    grid-area: promotion;
+}
+.footer{
+    grid-area: footer;
+}
+
+.grid{
+    display: grid;
+grid-template-columns: repeat(4,20%);
+grid-template-rows: 60%;
+justify-content: center;
+align-content: center;
+gap: 1rem;
+}
+@media (max-width:1000px) {
+    .grid{
+        height: 80%;
+        grid-template-columns: 40%;
+        grid-template-rows: repeat(4,25%);  
+    }
+}
