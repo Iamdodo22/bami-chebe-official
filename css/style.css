@@ -18,8 +18,9 @@ body {
   width: 70%;
   text-align: center;
   letter-spacing: 1rem;
-  color: black;
-  font-family: "Great Vibes", cursive;
+  color: white;
+  font-family: "Kanit", sans-serif;
+  text-shadow: 2px 2px 4px black;
 }
 
 @media (max-width: 700px) {
@@ -196,11 +197,12 @@ html {
 
 .btn {
   display: inline-block;
-  padding: 0.8rem 6rem;
+  padding: 1.4rem 7rem;
   font-size: 12px;
   white-space: nowrap;
   width: 50%;
   border: none;
+  position: relative;
   cursor: pointer;
   transition: all 0.2s;
 }
@@ -230,13 +232,32 @@ html {
     width: 30%;
   }
 }
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  box-shadow: 0.5px 0.5px 1px black;
+  background-color: gray;
+}
+.btn:hover {
+  color: white;
+  transform: translateY(-3px);
+}
+.btn:hover::after {
+  transform: scale(1.15);
+  border-radius: 25px;
+}
 
 @media (max-width: 480px) {
   .btn {
     width: 100%;
   }
   .btn-black--fstart {
-    width: 50%;
+    width: 70%;
   }
   .btn-black--shop {
     width: 50%;
@@ -247,7 +268,7 @@ html {
   height: 100%;
   width: 100%;
   padding: 2rem;
-  background-image: url(/img/bg.jpg);
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/img/bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: 68%;
@@ -323,7 +344,7 @@ body {
 
 @media (max-width: 1000px) {
   body {
-    grid-template-rows: 100vh 140vh 120vh 70vh 70vh;
+    grid-template-rows: 100vh 110vh 120vh 50vh 50vh;
   }
 }
 .header {

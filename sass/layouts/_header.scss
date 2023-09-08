@@ -3,11 +3,16 @@
     height: 100%;
     width: 100%;
     padding: 2rem;
-    background-image:url(/img/bg.jpg);
+    background-image:linear-gradient(
+        to left ,
+        rgba($color-black,.1),
+      rgba($color-black,.1)),
+      url(/img/bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: 68%;
     background-blend-mode: screen;
+    // filter: blur(1px);
     grid-template-columns: auto;
     grid-template-rows: 10% 70%;
     grid-template-areas: 
@@ -21,7 +26,7 @@
 &__btn{
     justify-self: center;
     align-self: flex-start;
-    @include rowflex($gap:2rem)
+    @include rowflex($gap:2rem);
 }
 @media (max-width:480px) {
     &__btn{
