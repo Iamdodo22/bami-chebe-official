@@ -1,11 +1,11 @@
 .section-ourStory{
-    height: 100%;
     width: 100%;
     background-color: antiquewhite;
     @include rowflex($gap:4rem);
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    padding: 3rem;
 }
 @media (max-width:1000px) {
     .section-ourStory{
@@ -14,20 +14,20 @@
 }
 
 .section-shop{
-@include colflex($gap:2rem);
-justify-content: center;
-align-items: center;
+  @include colflex($gap:2rem);
+  padding: 3rem;
+  width: 100%;
  h2{
+    text-align: center;
     text-transform: uppercase;
-    font-size: 18px;
-    padding-top: 4%;
+    font-size: 1.8rem;
     color: green;
  }
 }
 
 .section-promotion{
     width: 100%;
-    height: 100%;
+    padding: 8rem;
     background-color: antiquewhite;
     color: $color-black;
 }

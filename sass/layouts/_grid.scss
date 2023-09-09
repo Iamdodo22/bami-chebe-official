@@ -1,7 +1,8 @@
 body{
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 100vh 90vh 80vh 50vh 50vh;
+    // grid-template-rows: 100vh 90vh 80vh 50vh 50vh;
+    // grid-template-rows: auto;
     grid-template-areas: 
     "header"
     "ourStory"
@@ -9,11 +10,12 @@ body{
     "promotion"
     "footer";
 }
-@media (max-width:1000px) {
-    body{
-        grid-template-rows: 100vh 110vh 120vh 50vh 50vh;
-    }
-}
+// @media (max-width:1000px) {
+//     body{
+//         grid-template-rows: 100vh 110vh 120vh 50vh 50vh;
+
+//     }
+// }
 .header{
     grid-area: header;
 }
@@ -32,16 +34,7 @@ body{
 
 .grid{
     display: grid;
-grid-template-columns: repeat(4,20%);
-grid-template-rows: 60%;
-justify-content: center;
-align-content: center;
-gap: 1rem;
-}
-@media (max-width:1000px) {
-    .grid{
-        height: 80%;
-        grid-template-columns: 50%;
-        grid-template-rows: repeat(4,25%);  
-    }
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    grid-template-rows: 20rem;
+    gap: 1rem;
 }

@@ -22,6 +22,7 @@
             width: 15%;
             background-color: green;
             border: none;
+            align-self: center;
         }
         @media (max-width:1000px) {
             &--shop{
@@ -60,7 +61,7 @@
         width: 100%;
         &-black{
             &--fstart{
-            width: 70%;
+            width: 90%;
             }
             &--shop{
                 width: 50%;
